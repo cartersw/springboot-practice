@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment01/service/TicketService.java
++++ b/src/main/java/dev/practice/assessment01/service/TicketService.java
+@@ -12,7 +12,7 @@
+  public TicketService(TicketRepository r,TicketMapper m,TicketRequestValidator v){repository=r;mapper=m;validator=v;}
+  public TicketResponse create(CreateTicketRequest request){
+   String ref=validator.reference(request.externalRef());String title=validator.title(request.title());int priority=validator.priority(request.priority());
+-  if(repository.existsByExternalRef(ref))throw new DuplicateReferenceException();
++  
+   Ticket t=new Ticket();t.setExternalRef(ref);t.setTitle(title);t.setPriority(priority);t.setStatus(TicketStatus.OPEN);
+   return mapper.response(repository.saveAndFlush(t));
+  }

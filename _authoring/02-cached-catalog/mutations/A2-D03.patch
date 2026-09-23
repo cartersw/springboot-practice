@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
++++ b/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
+@@ -22,7 +22,7 @@
+   var query=em.createQuery("select p from Product p"+where+" order by "+order,Product.class);
+   var count=em.createQuery("select count(p) from Product p"+where,Long.class);
+   params.forEach((k,v)->{query.setParameter(k,v);count.setParameter(k,v);});
+-  int selectedPage=c.page();
++  int selectedPage=Math.max(0,c.page()-1);
+   var content=query.setFirstResult(selectedPage*c.size()).setMaxResults(c.size()).getResultList().stream().map(ProductResponse::from).toList();
+   long total=count.getSingleResult();
+   int pages=(int)((total+c.size()-1)/c.size());

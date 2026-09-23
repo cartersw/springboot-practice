@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "mutations": [
+    {
+      "id": "A2-D01",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java",
+          "referenceSha256": "5ca6011e6624ee6f41ea40f7b1600147f3bafca9edd4a8c68aa51bdcc07f00a0",
+          "starterSha256": "75c697474d16372f336dc4c899936ff96abcb25b369a3f3bb1ad44c1443663d6",
+          "combinedStarterSha256": "4f2869f43b355b09e2072af4ae28bbe01a9ba12144eb21f0540b466bb03d9fae"
+        }
+      ],
+      "patch": "mutations/A2-D01.patch",
+      "designatedDetectingIds": [
+        "A2-02"
+      ],
+      "observedFailingIds": [
+        "A2-17",
+        "A2-21",
+        "A2-02",
+        "A2-04"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "When both q and category are supplied, their two predicates combine with OR instead of AND. Other filters still combine with the resulting predicate using AND. A single q or category predicate behaves correctly.",
+      "affectedTestIds": [
+        "A2-02",
+        "A2-04",
+        "A2-17",
+        "A2-21"
+      ],
+      "verificationEvidence": "../verification/A2-D01.json"
+    },
+    {
+      "id": "A2-D02",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java",
+          "referenceSha256": "5ca6011e6624ee6f41ea40f7b1600147f3bafca9edd4a8c68aa51bdcc07f00a0",
+          "starterSha256": "72d9573828bd0fa2d2b4383660a7c9270af893f5366a832e45e58d357b4cc9ae",
+          "combinedStarterSha256": "4f2869f43b355b09e2072af4ae28bbe01a9ba12144eb21f0540b466bb03d9fae"
+        }
+      ],
+      "patch": "mutations/A2-D02.patch",
+      "designatedDetectingIds": [
+        "A2-05"
+      ],
+      "observedFailingIds": [
+        "A2-20",
+        "A2-05"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Minimum price uses `>` instead of `>=`. Maximum price remains inclusive.",
+      "affectedTestIds": [
+        "A2-05",
+        "A2-20"
+      ],
+      "verificationEvidence": "../verification/A2-D02.json"
+    },
+    {
+      "id": "A2-D03",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java",
+          "referenceSha256": "5ca6011e6624ee6f41ea40f7b1600147f3bafca9edd4a8c68aa51bdcc07f00a0",
+          "starterSha256": "1efd9d12e8dfa013f2a8675531077d79979fdb9ec9a2ffd42d6c841c5628ed06",
+          "combinedStarterSha256": "4f2869f43b355b09e2072af4ae28bbe01a9ba12144eb21f0540b466bb03d9fae"
+        }
+      ],
+      "patch": "mutations/A2-D03.patch",
+      "designatedDetectingIds": [
+        "A2-07",
+        "A2-16"
+      ],
+      "observedFailingIds": [
+        "A2-16",
+        "A2-24",
+        "A2-07"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Database page selection uses `max(0, requestedPage - 1)`, treating positive page numbers as one-based. Keep the response's `page` field equal to the originally requested value.",
+      "affectedTestIds": [
+        "A2-07",
+        "A2-16",
+        "A2-24"
+      ],
+      "verificationEvidence": "../verification/A2-D03.json"
+    },
+    {
+      "id": "A2-D04",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java",
+          "referenceSha256": "5ca6011e6624ee6f41ea40f7b1600147f3bafca9edd4a8c68aa51bdcc07f00a0",
+          "starterSha256": "890d9268b86b566bfc1670aaca9de965a75d7f720e20907b27f204248ae0b0d6",
+          "combinedStarterSha256": "4f2869f43b355b09e2072af4ae28bbe01a9ba12144eb21f0540b466bb03d9fae"
+        }
+      ],
+      "patch": "mutations/A2-D04.patch",
+      "designatedDetectingIds": [
+        "A2-08"
+      ],
+      "observedFailingIds": [
+        "A2-19",
+        "A2-08"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "priceDesc sorts by price descending **and ID descending**, incorrectly reversing its tie-breaker. Other sort modes remain correct.",
+      "affectedTestIds": [
+        "A2-08",
+        "A2-19"
+      ],
+      "verificationEvidence": "../verification/A2-D04.json"
+    },
+    {
+      "id": "A2-D05",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java",
+          "referenceSha256": "5ca6011e6624ee6f41ea40f7b1600147f3bafca9edd4a8c68aa51bdcc07f00a0",
+          "starterSha256": "8bcb6913ff84d130dcce48964fbad4eb76c071efdb0da2aeee3d940f8c0a1eaa",
+          "combinedStarterSha256": "4f2869f43b355b09e2072af4ae28bbe01a9ba12144eb21f0540b466bb03d9fae"
+        }
+      ],
+      "patch": "mutations/A2-D05.patch",
+      "designatedDetectingIds": [
+        "A2-01",
+        "A2-10",
+        "A2-24"
+      ],
+      "observedFailingIds": [
+        "A2-24",
+        "A2-01",
+        "A2-07",
+        "A2-10"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Response totalElements is set to current content length and totalPages is derived from that incorrect number. Keep `page` and `size` as requested; first/last derive from the supplied metadata.",
+      "affectedTestIds": [
+        "A2-01",
+        "A2-07",
+        "A2-10",
+        "A2-24"
+      ],
+      "verificationEvidence": "../verification/A2-D05.json"
+    },
+    {
+      "id": "A2-D06",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment02/cache/SearchKeyFactory.java",
+          "referenceSha256": "72d18d7d7da11c24358cdd371400c465d28d38a4003e8c770948ae853335ada5",
+          "starterSha256": "fd6f9bf3459c4807aa944e515a06cea33c369d4612742c82c325e1ebf80b7cb6",
+          "combinedStarterSha256": "fd6f9bf3459c4807aa944e515a06cea33c369d4612742c82c325e1ebf80b7cb6"
+        }
+      ],
+      "patch": "mutations/A2-D06.patch",
+      "designatedDetectingIds": [
+        "A2-16",
+        "A2-17",
+        "A2-18",
+        "A2-19"
+      ],
+      "observedFailingIds": [
+        "A2-16",
+        "A2-17",
+        "A2-18",
+        "A2-19"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Cache key includes category, minPrice, and maxPrice, but omits q, inStock, page, size, and sort. The key prefix is correct.",
+      "affectedTestIds": [
+        "A2-16",
+        "A2-17",
+        "A2-18",
+        "A2-19"
+      ],
+      "verificationEvidence": "../verification/A2-D06.json"
+    },
+    {
+      "id": "A2-D07",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment02/cache/SearchCacheInvalidator.java",
+          "referenceSha256": "7024541936e30235ef91319151235e035068cde31b5d6f593c47d1a5b1f20a11",
+          "starterSha256": "ebdaa66585089d71cc52422501c427175bc234307b05d9b22e67008d9e5e4bcc",
+          "combinedStarterSha256": "ebdaa66585089d71cc52422501c427175bc234307b05d9b22e67008d9e5e4bcc"
+        }
+      ],
+      "patch": "mutations/A2-D07.patch",
+      "designatedDetectingIds": [
+        "A2-14",
+        "A2-23"
+      ],
+      "observedFailingIds": [
+        "A2-23",
+        "A2-14"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "SearchCacheInvalidator calls exact-key `delete(\"products:search:v1:\")` once instead of deleting matching keys. This is the incomplete invalidation feature.",
+      "affectedTestIds": [
+        "A2-14",
+        "A2-23"
+      ],
+      "verificationEvidence": "../verification/A2-D07.json"
+    }
+  ]
+}

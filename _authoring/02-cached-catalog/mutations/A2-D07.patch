@@ -1,0 +1,9 @@
+--- a/src/main/java/dev/practice/assessment02/cache/SearchCacheInvalidator.java
++++ b/src/main/java/dev/practice/assessment02/cache/SearchCacheInvalidator.java
+@@ -2,5 +2,5 @@
+ import org.springframework.stereotype.Component;
+ @Component public class SearchCacheInvalidator {
+  private final KeyValueStore store;public SearchCacheInvalidator(KeyValueStore s){store=s;}
+- public void invalidate(){for(String key:store.keys())if(key.startsWith("products:search:v1:"))store.delete(key);}
++ public void invalidate(){store.delete("products:search:v1:");}
+ }

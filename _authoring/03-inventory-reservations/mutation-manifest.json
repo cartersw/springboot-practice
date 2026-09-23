@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "mutations": [
+    {
+      "id": "A3-D01",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/service/AvailabilityChecker.java",
+          "referenceSha256": "20324c0b40b27af725db0bed71a604b149450a2a10e73f32e2c15ca04280d60c",
+          "starterSha256": "14557b9a7fbefebdf2cefc1c8f7ce6ca3da3b98763191c20c4de69c07c9e33e7",
+          "combinedStarterSha256": "14557b9a7fbefebdf2cefc1c8f7ce6ca3da3b98763191c20c4de69c07c9e33e7"
+        }
+      ],
+      "patch": "mutations/A3-D01.patch",
+      "designatedDetectingIds": [
+        "A3-05"
+      ],
+      "observedFailingIds": [
+        "A3-05"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Availability rejects `available <= requested` instead of only rejecting `available < requested`, so exact depletion incorrectly fails.",
+      "affectedTestIds": [
+        "A3-05"
+      ],
+      "verificationEvidence": "../verification/A3-D01.json"
+    },
+    {
+      "id": "A3-D02",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/normalization/ReservationRequestNormalizer.java",
+          "referenceSha256": "8195a5524ec5a1663c68addfd6367edbbadf5a4dfda711c4befa9111ca3255af",
+          "starterSha256": "4657ba9b13f73b75b7a029b7f4b7d0565b78df1a2742e6b577e00a7a037b15bc",
+          "combinedStarterSha256": "f70f61251b0e9508577b854439c7cb1efaa18cf6211661b4345e21715b697d6f"
+        }
+      ],
+      "patch": "mutations/A3-D02.patch",
+      "designatedDetectingIds": [
+        "A3-07",
+        "A3-21"
+      ],
+      "observedFailingIds": [
+        "A3-16",
+        "A3-21",
+        "A3-07"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Duplicate normalized SKUs overwrite the earlier quantity with the last input quantity instead of summing.",
+      "affectedTestIds": [
+        "A3-07",
+        "A3-16",
+        "A3-21"
+      ],
+      "verificationEvidence": "../verification/A3-D02.json"
+    },
+    {
+      "id": "A3-D03",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/normalization/ReservationRequestNormalizer.java",
+          "referenceSha256": "8195a5524ec5a1663c68addfd6367edbbadf5a4dfda711c4befa9111ca3255af",
+          "starterSha256": "3ec3d4f2f58441d8148ffb271ab7f9825f95d54adeaea8c5bbe3208c67bbbb8f",
+          "combinedStarterSha256": "f70f61251b0e9508577b854439c7cb1efaa18cf6211661b4345e21715b697d6f"
+        }
+      ],
+      "patch": "mutations/A3-D03.patch",
+      "designatedDetectingIds": [
+        "A3-16"
+      ],
+      "observedFailingIds": [
+        "A3-16"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "SKU normalization strips whitespace but omits uppercase conversion. Keep syntactic validation case-permissive long enough that this produces an ordinary incorrect unknown-SKU response, not an unexpected parsing exception. The correct implementation normalizes before applying the uppercase SKU pattern.",
+      "affectedTestIds": [
+        "A3-16"
+      ],
+      "verificationEvidence": "../verification/A3-D03.json"
+    },
+    {
+      "id": "A3-D04",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/service/ReservationService.java",
+          "referenceSha256": "780d9a2510d1aa0e4befd10b7935ef472b63ed643add4205e7bce1817e3f3bfd",
+          "starterSha256": "ce5053ea142c9df3cfada6e728f6354692c481c233a821614d73011ab20faa87",
+          "combinedStarterSha256": "210baa2f3f3e99437a86e2c62222138cc7191738a6793d3f925807e3cc510167"
+        }
+      ],
+      "patch": "mutations/A3-D04.patch",
+      "designatedDetectingIds": [
+        "A3-14",
+        "A3-19"
+      ],
+      "observedFailingIds": [
+        "A3-18",
+        "A3-19",
+        "A3-21",
+        "A3-03",
+        "A3-04",
+        "A3-14"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Remove the workflow transaction from `ReservationService.create`, while leaving each Spring Data repository save operational. Individual saves can commit before a later failure. Keep DTO loading and repository queries valid so this causes partial persistence, not a startup or lazy-loading failure.",
+      "affectedTestIds": [
+        "A3-03",
+        "A3-04",
+        "A3-14",
+        "A3-18",
+        "A3-19",
+        "A3-21"
+      ],
+      "verificationEvidence": "../verification/A3-D04.json"
+    },
+    {
+      "id": "A3-D05",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/controller/ReservationController.java",
+          "referenceSha256": "e7e772e4b7e687d2356be7975205edaded9571ef7e709c7f8bb85edc39e21a2c",
+          "starterSha256": "20a41d134e99f3b41001d5f1023c8cb3943598d192341bc563c4a21dfe07c14a",
+          "combinedStarterSha256": "20a41d134e99f3b41001d5f1023c8cb3943598d192341bc563c4a21dfe07c14a"
+        }
+      ],
+      "patch": "mutations/A3-D05.patch",
+      "designatedDetectingIds": [
+        "A3-10"
+      ],
+      "observedFailingIds": [
+        "A3-16",
+        "A3-24",
+        "A3-25",
+        "A3-10"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Creation controller always responds 201, ignoring the correct service outcome's `isNew` flag. A replay should instead be 200.",
+      "affectedTestIds": [
+        "A3-10",
+        "A3-16",
+        "A3-24",
+        "A3-25"
+      ],
+      "verificationEvidence": "../verification/A3-D05.json"
+    },
+    {
+      "id": "A3-D06",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/normalization/ReservationRequestNormalizer.java",
+          "referenceSha256": "8195a5524ec5a1663c68addfd6367edbbadf5a4dfda711c4befa9111ca3255af",
+          "starterSha256": "5de0dc72502860a2b66a3287aa2faa6e7d7c4e59eaea37d3e90190310b4330b9",
+          "combinedStarterSha256": "f70f61251b0e9508577b854439c7cb1efaa18cf6211661b4345e21715b697d6f"
+        }
+      ],
+      "patch": "mutations/A3-D06.patch",
+      "designatedDetectingIds": [
+        "A3-17"
+      ],
+      "observedFailingIds": [
+        "A3-17"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Existing-key comparison checks normalized items but not customerRef. A different customer with the same key/items is wrongly accepted as a replay.",
+      "affectedTestIds": [
+        "A3-17"
+      ],
+      "verificationEvidence": "../verification/A3-D06.json"
+    },
+    {
+      "id": "A3-D07",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/service/ReservationService.java",
+          "referenceSha256": "780d9a2510d1aa0e4befd10b7935ef472b63ed643add4205e7bce1817e3f3bfd",
+          "starterSha256": "b50b9261e7e6e354ce5bf873de346e0ea7190022881b172b5ce683f573b75d71",
+          "combinedStarterSha256": "210baa2f3f3e99437a86e2c62222138cc7191738a6793d3f925807e3cc510167"
+        }
+      ],
+      "patch": "mutations/A3-D07.patch",
+      "designatedDetectingIds": [
+        "A3-13"
+      ],
+      "observedFailingIds": [
+        "A3-13"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Cancellation lacks the already-cancelled early return; it restores quantities and records another cancellation event on every call. Keep cancellation's transaction intact.",
+      "affectedTestIds": [
+        "A3-13"
+      ],
+      "verificationEvidence": "../verification/A3-D07.json"
+    },
+    {
+      "id": "A3-D08",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment03/repository/InventorySummaryRepository.java",
+          "referenceSha256": "b1856e8a68227f494fac6d2526013af47878d78ec10858d820eef3153756ddd9",
+          "starterSha256": "a63f17cb147ee9c5d061aa8e64f4459a6bb15abc04276cc7dce4677409aeb4aa",
+          "combinedStarterSha256": "a63f17cb147ee9c5d061aa8e64f4459a6bb15abc04276cc7dce4677409aeb4aa"
+        }
+      ],
+      "patch": "mutations/A3-D08.patch",
+      "designatedDetectingIds": [
+        "A3-15",
+        "A3-22"
+      ],
+      "observedFailingIds": [
+        "A3-22",
+        "A3-15"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Summary uses inner joins from stock to lines/reservations, includes cancelled reservations, uses COUNT(line.id) for reservedQuantity, and counts reservation rows rather than the required distinct active reservation IDs. This deliberately incorrect aggregate query is the incomplete summary feature.",
+      "affectedTestIds": [
+        "A3-15",
+        "A3-22"
+      ],
+      "verificationEvidence": "../verification/A3-D08.json"
+    }
+  ]
+}

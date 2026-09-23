@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment01/service/TicketService.java
++++ b/src/main/java/dev/practice/assessment01/service/TicketService.java
+@@ -26,7 +26,7 @@
+  public List<TicketResponse> list(String rawStatus,String rawSort){
+   TicketStatus status=rawStatus==null?null:validator.status(rawStatus);TicketSort sort=validator.sort(rawSort);
+   Comparator<Ticket> comparator=Comparator.comparing(Ticket::getId);
+-  if(sort==TicketSort.priorityDesc)comparator=Comparator.comparing(Ticket::getPriority).reversed().thenComparing(Ticket::getId);
++  if(sort==TicketSort.priorityDesc)comparator=Comparator.comparing(Ticket::getPriority).thenComparing(Ticket::getId);
+   return repository.findAll().stream().filter(t->status==null||t.getStatus()==status).sorted(comparator).map(mapper::response).toList();
+  }
+  public void delete(long id){Ticket t=find(id);repository.delete(t);}

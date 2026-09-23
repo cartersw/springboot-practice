@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "assessments": {
+    "01": {
+      "path": "01-incident-desk/grader-manifest.json",
+      "sha256": "c4c782f485e59dc5abf5bd688fe41143a0bb602dee445f9973772b46755409e2"
+    },
+    "02": {
+      "path": "02-cached-catalog/grader-manifest.json",
+      "sha256": "98933264d50a4d422559734b4f7c530cbec9e66d78f5bcc0e2303ddaa486aaa8"
+    },
+    "03": {
+      "path": "03-inventory-reservations/grader-manifest.json",
+      "sha256": "39dcc3cd060668c9414fe0a30db7a9c927f41361393d3f02d6eb8817d3792b6e"
+    }
+  }
+}

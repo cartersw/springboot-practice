@@ -1,0 +1,7 @@
+dev\practice\assessment02\contract\SmokeTest.class
+dev\practice\assessment02\contract\CatalogPrivateContractTest.class
+dev\practice\assessment02\support\MutableClock.class
+dev\practice\assessment02\support\Fixtures.class
+dev\practice\assessment02\contract\CatalogPublicContractTest.class
+dev\practice\assessment02\support\ApiTestSupport.class
+dev\practice\assessment02\support\ClockTestConfig.class

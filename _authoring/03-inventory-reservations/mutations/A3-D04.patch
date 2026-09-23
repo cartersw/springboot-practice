@@ -1,0 +1,10 @@
+--- a/src/main/java/dev/practice/assessment03/service/ReservationService.java
++++ b/src/main/java/dev/practice/assessment03/service/ReservationService.java
+@@ -7,7 +7,6 @@
+  private long validId(long id){if(id<=0)throw new InvalidRequestException("ID must be positive");return id;}
+  private Reservation find(long id){return reservations.findById(validId(id)).orElseThrow(ReservationNotFoundException::new);}
+  private ReservationResponse response(Reservation r){var items=lines.findByReservationIdOrderByStockItemSkuAsc(r.getId()).stream().map(l->new ReservationItemResponse(l.getStockItem().getSku(),l.getQuantity())).toList();return new ReservationResponse(r.getId(),r.getRequestKey(),r.getCustomerRef(),r.getStatus().name(),items,items.stream().mapToInt(ReservationItemResponse::quantity).sum());}
+- @Transactional
+  public CreateReservationOutcome create(CreateReservationRequest input){
+   var request=normalizer.normalize(input);var existing=reservations.findByRequestKey(request.requestKey());
+   if(existing.isPresent()){var r=existing.get();if(!normalizer.samePayload(r.getCanonicalPayload(),request.canonicalPayload()))throw new IdempotencyConflictException();return new CreateReservationOutcome(response(r),false);}

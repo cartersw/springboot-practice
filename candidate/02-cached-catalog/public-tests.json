@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "tests": [
+    {
+      "id": "A2-01",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_01",
+      "points": 4,
+      "topic": "Default page shape and totals"
+    },
+    {
+      "id": "A2-02",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_02",
+      "points": 4,
+      "topic": "Combined name and category filters"
+    },
+    {
+      "id": "A2-03",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_03",
+      "points": 4,
+      "topic": "Blank and unknown filters"
+    },
+    {
+      "id": "A2-04",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_04",
+      "points": 4,
+      "topic": "Normalized search text"
+    },
+    {
+      "id": "A2-05",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_05",
+      "points": 4,
+      "topic": "Inclusive price bounds"
+    },
+    {
+      "id": "A2-06",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_06",
+      "points": 4,
+      "topic": "Stock predicates"
+    },
+    {
+      "id": "A2-07",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_07",
+      "points": 4,
+      "topic": "Second page and metadata"
+    },
+    {
+      "id": "A2-08",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_08",
+      "points": 4,
+      "topic": "Descending price ties"
+    },
+    {
+      "id": "A2-09",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_09",
+      "points": 4,
+      "topic": "Name ordering"
+    },
+    {
+      "id": "A2-10",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_10",
+      "points": 4,
+      "topic": "Out of range page"
+    },
+    {
+      "id": "A2-11",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_11",
+      "points": 4,
+      "topic": "Empty search page"
+    },
+    {
+      "id": "A2-12",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_12",
+      "points": 4,
+      "topic": "Invalid searches have no effects"
+    },
+    {
+      "id": "A2-13",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_13",
+      "points": 4,
+      "topic": "Cache reuses populated and empty responses"
+    },
+    {
+      "id": "A2-14",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_14",
+      "points": 4,
+      "topic": "Successful writes refresh searches"
+    },
+    {
+      "id": "A2-15",
+      "className": "dev.practice.assessment02.contract.CatalogPublicContractTest",
+      "methodName": "a2_15",
+      "points": 4,
+      "topic": "Failed writes preserve cache and rows"
+    }
+  ]
+}

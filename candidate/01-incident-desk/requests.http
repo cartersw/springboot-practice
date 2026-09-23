@@ -1,0 +1,26 @@
+@base = http://127.0.0.1:8081
+
+### Health
+GET {{base}}/health
+
+### Read fixtures
+GET {{base}}/api/tickets?status=OPEN&sort=priorityDesc
+### Create; use the returned ID below
+# @name createTicket
+POST {{base}}/api/tickets
+Content-Type: application/json
+
+{"externalRef":"INC-200","title":"Scanner disconnected","priority":4}
+### Read created row
+GET {{base}}/api/tickets/{{createTicket.response.body.$.id}}
+### Replace mutable fields
+PUT {{base}}/api/tickets/{{createTicket.response.body.$.id}}
+Content-Type: application/json
+
+{"title":"Scanner connected","priority":2,"status":"RESOLVED"}
+### Delete
+DELETE {{base}}/api/tickets/{{createTicket.response.body.$.id}}
+### Documented invalid input
+GET {{base}}/api/tickets?sort=unknown
+### Missing row
+GET {{base}}/api/tickets/9999

@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment01/controller/TicketController.java
++++ b/src/main/java/dev/practice/assessment01/controller/TicketController.java
+@@ -8,7 +8,7 @@
+ @RestController @RequestMapping("/api/tickets") public class TicketController {
+  private final TicketService service;
+  public TicketController(TicketService s){service=s;}
+- @PostMapping public ResponseEntity<TicketResponse> create(@RequestBody CreateTicketRequest r){TicketResponse t=service.create(r);return ResponseEntity.status(201).location(URI.create("/api/tickets/"+t.id())).body(t);}
++ @PostMapping public ResponseEntity<TicketResponse> create(@RequestBody CreateTicketRequest r){TicketResponse t=service.create(r);return ResponseEntity.status(200).location(URI.create("/api/tickets/"+t.id())).body(t);}
+  @GetMapping("/{id}") public ResponseEntity<TicketResponse> get(@PathVariable long id){return ResponseEntity.ok(service.get(id));}
+  @GetMapping public List<TicketResponse> list(@RequestParam(required=false) String status,@RequestParam(required=false) String sort){return service.list(status,sort);}
+  @PutMapping("/{id}") public TicketResponse update(@PathVariable long id,@RequestBody UpdateTicketRequest r){return service.update(id,r);}

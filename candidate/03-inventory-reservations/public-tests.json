@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "tests": [
+    {
+      "id": "A3-01",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_01",
+      "points": 4,
+      "topic": "Create response and protected fields"
+    },
+    {
+      "id": "A3-02",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_02",
+      "points": 4,
+      "topic": "Committed creation workflow"
+    },
+    {
+      "id": "A3-03",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_03",
+      "points": 4,
+      "topic": "Unknown stock rolls back"
+    },
+    {
+      "id": "A3-04",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_04",
+      "points": 4,
+      "topic": "Insufficient stock rolls back"
+    },
+    {
+      "id": "A3-05",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_05",
+      "points": 4,
+      "topic": "Exact stock depletion"
+    },
+    {
+      "id": "A3-06",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_06",
+      "points": 4,
+      "topic": "Invalid requests never write"
+    },
+    {
+      "id": "A3-07",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_07",
+      "points": 4,
+      "topic": "Duplicate items merge"
+    },
+    {
+      "id": "A3-08",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_08",
+      "points": 4,
+      "topic": "Read committed reservation"
+    },
+    {
+      "id": "A3-09",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_09",
+      "points": 4,
+      "topic": "Missing and invalid lookup IDs"
+    },
+    {
+      "id": "A3-10",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_10",
+      "points": 4,
+      "topic": "Identical replay is read only"
+    },
+    {
+      "id": "A3-11",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_11",
+      "points": 4,
+      "topic": "Changed lines conflict"
+    },
+    {
+      "id": "A3-12",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_12",
+      "points": 4,
+      "topic": "Cancel restores inventory"
+    },
+    {
+      "id": "A3-13",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_13",
+      "points": 4,
+      "topic": "Repeated cancellation is read only"
+    },
+    {
+      "id": "A3-14",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_14",
+      "points": 4,
+      "topic": "Later line failure rolls back"
+    },
+    {
+      "id": "A3-15",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_15",
+      "points": 4,
+      "topic": "Initial complete inventory summary"
+    }
+  ]
+}

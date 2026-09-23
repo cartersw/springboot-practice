@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment01/service/TicketService.java
++++ b/src/main/java/dev/practice/assessment01/service/TicketService.java
+@@ -20,7 +20,7 @@
+  public TicketResponse get(long id){return mapper.response(find(id));}
+  public TicketResponse update(long id,UpdateTicketRequest r){
+   validator.id(id);String title=validator.title(r.title());int priority=validator.priority(r.priority());TicketStatus status=validator.status(r.status());
+-  Ticket t=find(id);t.setTitle(title);t.setPriority(priority);t.setStatus(status);
++  Ticket t=find(id);t.setTitle(title);t.setPriority(priority);
+   return mapper.response(repository.saveAndFlush(t));
+  }
+  public List<TicketResponse> list(String rawStatus,String rawSort){

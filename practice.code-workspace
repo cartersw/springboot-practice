@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "candidate/01-incident-desk"
+    },
+    {
+      "path": "candidate/02-cached-catalog"
+    },
+    {
+      "path": "candidate/03-inventory-reservations"
+    }
+  ],
+  "settings": {
+    "search.exclude": {
+      "**/_authoring/**": true,
+      "**/.runs/**": true,
+      "**/SOLUTION.md": true,
+      "**/HINTS.md": true
+    },
+    "files.exclude": {
+      "**/_authoring": true,
+      "**/.runs": true
+    }
+  }
+}

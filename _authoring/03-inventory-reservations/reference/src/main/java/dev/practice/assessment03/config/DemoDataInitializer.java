@@ -1,0 +1,3 @@
+package dev.practice.assessment03.config;
+import org.springframework.context.annotation.Profile;import org.springframework.stereotype.Component;import org.springframework.boot.CommandLineRunner;import org.springframework.jdbc.core.JdbcTemplate;
+@Component @Profile("demo") public class DemoDataInitializer implements CommandLineRunner {private final JdbcTemplate jdbc;public DemoDataInitializer(JdbcTemplate j){jdbc=j;}public void run(String... args){jdbc.update("insert into stock_items(sku,display_name,available_quantity) values ('WASHER-M8','M8 Washer',0),('NUT-M8','M8 Nut',8),('CLIP-S','Small Clip',20),('BOLT-M8','M8 Bolt',10)");}}

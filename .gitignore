@@ -1,0 +1,13 @@
+**/target/
+**/__pycache__/
+*.pyc
+/.runs/
+/reports/
+/attempts/**/*-final-verification-*/
+/attempts/**/verification with spaces/
+/transfer/
+/_authoring/toolchain/
+/_authoring/verification/
+/_authoring/git-backups/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "assessmentId": "03",
+  "specificationVersion": "1.0",
+  "maxPoints": 100,
+  "expectedScoredTests": 25,
+  "expectedSmokeTests": 2,
+  "tests": [
+    {
+      "id": "A3-01",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_01",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-02",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_02",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-03",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_03",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-04",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_04",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-05",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_05",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-06",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_06",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-07",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_07",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-08",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_08",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-09",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_09",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-10",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_10",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-11",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_11",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-12",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_12",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-13",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_13",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-14",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_14",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-15",
+      "className": "dev.practice.assessment03.contract.ReservationPublicContractTest",
+      "methodName": "a3_15",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A3-16",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_16",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-17",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_17",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-18",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_18",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-19",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_19",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-20",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_20",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-21",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_21",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-22",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_22",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-23",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_23",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-24",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_24",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A3-25",
+      "className": "dev.practice.assessment03.contract.ReservationPrivateContractTest",
+      "methodName": "a3_25",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "SMOKE-CONTEXTSTARTS",
+      "className": "dev.practice.assessment03.contract.SmokeTest",
+      "methodName": "contextStarts",
+      "visibility": "public",
+      "points": 0
+    },
+    {
+      "id": "SMOKE-HEALTHRESPONDS",
+      "className": "dev.practice.assessment03.contract.SmokeTest",
+      "methodName": "healthResponds",
+      "visibility": "public",
+      "points": 0
+    }
+  ],
+  "protectedFiles": {
+    ".mvn/wrapper/maven-wrapper.properties": "b0e7995e6522a43fb50b482c0ae81bf639fe7b290d11015c9cb3367f99f1bbb8",
+    "mvnw": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+    "mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
+    "pom.xml": "dbff506e774794fe761a70882d2c4e6edd2326132ec840c1ea62a2811ede6ec0",
+    "src/main/java/dev/practice/assessment03/InventoryReservationsApplication.java": "339ec149c04b51b38a48b51ae2a87cfbc96ebc285c57c97c60b76776a07b6d7c",
+    "src/main/java/dev/practice/assessment03/audit/DatabaseReservationAudit.java": "ecf49a49f9b5282b3035cc3c47c1f5d387340356892d1f1e8772b273315838c8",
+    "src/main/java/dev/practice/assessment03/audit/ReservationAudit.java": "d21c5c925144a7fd8c687526bb85c782835600daa7085cf697196468bf07a339",
+    "src/main/java/dev/practice/assessment03/config/DemoDataInitializer.java": "c3a07ff3ceaae5a49b69d0228fa6dd5f9ec01a1ac977dd35c0279447a186aca3",
+    "src/main/java/dev/practice/assessment03/health/HealthController.java": "5bcd5e6d5d8a7ff3997d45e8390a5d596199d8320ad52f5b1c0a23e228ff440b",
+    "src/main/resources/application.yml": "999cbc02d1c5ef0864076e85127b3eb065f2f4ebf1c21774ff156ef0454d2f6d",
+    "src/test/java/dev/practice/assessment03/contract/ReservationPublicContractTest.java": "8e78ad90f03adbff489ceebacdc704c7de8041d8fe29feabfc85fa0c226aeaed",
+    "src/test/java/dev/practice/assessment03/contract/SmokeTest.java": "3dde3942264cb0f9e79c0046babbb365aead0a01d950ac28d9e1f4c18e65499b",
+    "src/test/java/dev/practice/assessment03/support/ApiTestSupport.java": "15f01b530f9fedd9220e935c553905cbd4b693cab54119d8e49ae268264940c0",
+    "src/test/java/dev/practice/assessment03/support/AuditTestConfig.java": "5ed078bf5617531b8453bc7f311a0c8845951a3dfee9da11555115ce9e086d65",
+    "src/test/java/dev/practice/assessment03/support/ControllableReservationAudit.java": "374d948e24b291d4752596297813788a73542d194e6e6f8ca853aba7f69928de",
+    "src/test/java/dev/practice/assessment03/support/Fixtures.java": "0af24aa00fc25628ba5fbb4c60ceb2ea652aa769de3067369c9746a928af721d",
+    "src/test/resources/application-test.yml": "332cb81218253c543a2a8b99cff7b548655cfeb7cb91ea9b4798e63f69ecbf5b",
+    "src/test/resources/junit-platform.properties": "38cd198fa1b94302fbd2f1c5a45242eee8c872e68e1c4eede55548ebade65579"
+  },
+  "trustedFiles": {
+    "trusted-tests/src/test/java/dev/practice/assessment03/contract/ReservationPrivateContractTest.java": "bfe17d49d03f65a3bef5ea34c9620540c9e1861c22d4af0aebc8e4480dc31c6e",
+    "trusted-tests/src/test/java/dev/practice/assessment03/contract/ReservationPublicContractTest.java": "8e78ad90f03adbff489ceebacdc704c7de8041d8fe29feabfc85fa0c226aeaed",
+    "trusted-tests/src/test/java/dev/practice/assessment03/contract/SmokeTest.java": "3dde3942264cb0f9e79c0046babbb365aead0a01d950ac28d9e1f4c18e65499b",
+    "trusted-tests/src/test/java/dev/practice/assessment03/support/ApiTestSupport.java": "15f01b530f9fedd9220e935c553905cbd4b693cab54119d8e49ae268264940c0",
+    "trusted-tests/src/test/java/dev/practice/assessment03/support/AuditTestConfig.java": "5ed078bf5617531b8453bc7f311a0c8845951a3dfee9da11555115ce9e086d65",
+    "trusted-tests/src/test/java/dev/practice/assessment03/support/ControllableReservationAudit.java": "374d948e24b291d4752596297813788a73542d194e6e6f8ca853aba7f69928de",
+    "trusted-tests/src/test/java/dev/practice/assessment03/support/Fixtures.java": "0af24aa00fc25628ba5fbb4c60ceb2ea652aa769de3067369c9746a928af721d",
+    "trusted-tests/src/test/resources/application-test.yml": "332cb81218253c543a2a8b99cff7b548655cfeb7cb91ea9b4798e63f69ecbf5b",
+    "trusted-tests/src/test/resources/junit-platform.properties": "38cd198fa1b94302fbd2f1c5a45242eee8c872e68e1c4eede55548ebade65579",
+    "trusted-build/mvnw": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+    "trusted-build/mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
+    "trusted-build/pom.xml": "dbff506e774794fe761a70882d2c4e6edd2326132ec840c1ea62a2811ede6ec0",
+    "trusted-build/.mvn/wrapper/maven-wrapper.properties": "b0e7995e6522a43fb50b482c0ae81bf639fe7b290d11015c9cb3367f99f1bbb8",
+    "trusted-build/src/main/resources/application.yml": "999cbc02d1c5ef0864076e85127b3eb065f2f4ebf1c21774ff156ef0454d2f6d"
+  },
+  "protectedTrees": [
+    ".mvn",
+    "src/main/resources",
+    "src/test"
+  ]
+}

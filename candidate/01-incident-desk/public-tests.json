@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "tests": [
+    {
+      "id": "A1-01",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_01",
+      "points": 4,
+      "topic": "Existing ticket representation"
+    },
+    {
+      "id": "A1-02",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_02",
+      "points": 4,
+      "topic": "Default ordered collection"
+    },
+    {
+      "id": "A1-03",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_03",
+      "points": 4,
+      "topic": "Create and persist"
+    },
+    {
+      "id": "A1-04",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_04",
+      "points": 4,
+      "topic": "Normalize create and ignore read only input"
+    },
+    {
+      "id": "A1-05",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_05",
+      "points": 4,
+      "topic": "Missing ticket"
+    },
+    {
+      "id": "A1-06",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_06",
+      "points": 4,
+      "topic": "Duplicate reference"
+    },
+    {
+      "id": "A1-07",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_07",
+      "points": 4,
+      "topic": "Replace mutable fields"
+    },
+    {
+      "id": "A1-08",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_08",
+      "points": 4,
+      "topic": "Missing update"
+    },
+    {
+      "id": "A1-09",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_09",
+      "points": 4,
+      "topic": "Delete existing"
+    },
+    {
+      "id": "A1-10",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_10",
+      "points": 4,
+      "topic": "Missing delete"
+    },
+    {
+      "id": "A1-11",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_11",
+      "points": 4,
+      "topic": "Status filtering"
+    },
+    {
+      "id": "A1-12",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_12",
+      "points": 4,
+      "topic": "Priority ordering"
+    },
+    {
+      "id": "A1-13",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_13",
+      "points": 4,
+      "topic": "Filter and ordering"
+    },
+    {
+      "id": "A1-14",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_14",
+      "points": 4,
+      "topic": "Invalid create boundaries"
+    },
+    {
+      "id": "A1-15",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_15",
+      "points": 4,
+      "topic": "Invalid JSON and integer input"
+    }
+  ]
+}

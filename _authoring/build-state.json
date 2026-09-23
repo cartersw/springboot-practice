@@ -1,0 +1,49 @@
+{
+  "status": "VERIFIED",
+  "phase": "FINAL_VERIFICATION_COMPLETE",
+  "completedAt": "2026-09-23T12:48:39.461065+00:00",
+  "assessments": {
+    "01": {
+      "status": "STARTER_VERIFIED",
+      "referenceVisible": 15,
+      "referencePrivate": 10,
+      "smoke": 2,
+      "starterVisiblePassed": 6,
+      "starterVisibleFailed": 9,
+      "starterScore": 40,
+      "mutationsDetected": 7,
+      "unsolved": true,
+      "instructionsVerified": true
+    },
+    "02": {
+      "status": "STARTER_VERIFIED",
+      "referenceVisible": 15,
+      "referencePrivate": 10,
+      "smoke": 2,
+      "starterVisiblePassed": 7,
+      "starterVisibleFailed": 8,
+      "starterScore": 36,
+      "mutationsDetected": 7,
+      "unsolved": true,
+      "instructionsVerified": true
+    },
+    "03": {
+      "status": "STARTER_VERIFIED",
+      "referenceVisible": 15,
+      "referencePrivate": 10,
+      "smoke": 2,
+      "starterVisiblePassed": 7,
+      "starterVisibleFailed": 8,
+      "starterScore": 36,
+      "mutationsDetected": 8,
+      "unsolved": true,
+      "instructionsVerified": true
+    }
+  },
+  "nextAction": "Begin Assessment 1 using START_HERE.md; leave candidate source unsolved.",
+  "evidence": "_authoring/verification",
+  "report": "VERIFICATION_REPORT.md",
+  "platform": "Windows 11 AMD64; Git Bash for Unix wrapper",
+  "nativeMacLinuxVerified": false,
+  "utilityTests": 43
+}

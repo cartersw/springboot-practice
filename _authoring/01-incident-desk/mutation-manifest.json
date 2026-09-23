@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "mutations": [
+    {
+      "id": "A1-D01",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment01/controller/TicketController.java",
+          "referenceSha256": "2bca4220de03084ea8c830d675efa3d9165701ecd4b54b493b72088f32cc5fa9",
+          "starterSha256": "2456b01e6cf28c4a2ddc6fb9ad7273d08e1d70d6e5ed86731029c14117cb06cd",
+          "combinedStarterSha256": "2456b01e6cf28c4a2ddc6fb9ad7273d08e1d70d6e5ed86731029c14117cb06cd"
+        }
+      ],
+      "patch": "mutations/A1-D01.patch",
+      "designatedDetectingIds": [
+        "A1-03"
+      ],
+      "observedFailingIds": [
+        "A1-17",
+        "A1-19",
+        "A1-25",
+        "A1-03",
+        "A1-04"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "POST persists correctly but returns 200 instead of 201. Keep its response DTO and Location header otherwise correct.",
+      "affectedTestIds": [
+        "A1-03",
+        "A1-04",
+        "A1-17",
+        "A1-19",
+        "A1-25"
+      ],
+      "verificationEvidence": "../verification/A1-D01.json"
+    },
+    {
+      "id": "A1-D02",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment01/service/TicketService.java",
+          "referenceSha256": "0d173bd6d46204624e8165bbd7045d4524eb9cd8ce3aa0f53d5a00951242037a",
+          "starterSha256": "292f74e3db23fd5959d7d5170cbb2553559409ca4f8bb5fb8f62df494bb55616",
+          "combinedStarterSha256": "290e99a172bf56e2bd138fe04d8977ae5e15c145e082279a23d29e82927624b3"
+        }
+      ],
+      "patch": "mutations/A1-D02.patch",
+      "designatedDetectingIds": [
+        "A1-05"
+      ],
+      "observedFailingIds": [
+        "A1-05"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "GET by a missing positive ID returns 200 with an empty body instead of a 404 error. Existing lookup remains correct.",
+      "affectedTestIds": [
+        "A1-05"
+      ],
+      "verificationEvidence": "../verification/A1-D02.json"
+    },
+    {
+      "id": "A1-D03",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment01/service/TicketService.java",
+          "referenceSha256": "0d173bd6d46204624e8165bbd7045d4524eb9cd8ce3aa0f53d5a00951242037a",
+          "starterSha256": "9abf59e5519bd59ff4b3b495d5bd97f075105de38d8eede1365755ffc5193a77",
+          "combinedStarterSha256": "290e99a172bf56e2bd138fe04d8977ae5e15c145e082279a23d29e82927624b3"
+        }
+      ],
+      "patch": "mutations/A1-D03.patch",
+      "designatedDetectingIds": [
+        "A1-06",
+        "A1-18"
+      ],
+      "observedFailingIds": [
+        "A1-18",
+        "A1-06"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "The service's duplicate-reference precheck is missing. Retain the database uniqueness constraint; a duplicate write reaches the constraint and is mapped to a 500 envelope by the generic handler instead of the required 409 domain response.",
+      "affectedTestIds": [
+        "A1-06",
+        "A1-18"
+      ],
+      "verificationEvidence": "../verification/A1-D03.json"
+    },
+    {
+      "id": "A1-D04",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment01/service/TicketService.java",
+          "referenceSha256": "0d173bd6d46204624e8165bbd7045d4524eb9cd8ce3aa0f53d5a00951242037a",
+          "starterSha256": "f101bc6292c73d7876ac205c2697195fdfb90e8ba40f9aac4e0d3175ca6d2685",
+          "combinedStarterSha256": "290e99a172bf56e2bd138fe04d8977ae5e15c145e082279a23d29e82927624b3"
+        }
+      ],
+      "patch": "mutations/A1-D04.patch",
+      "designatedDetectingIds": [
+        "A1-07"
+      ],
+      "observedFailingIds": [
+        "A1-07"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "PUT applies title and priority but never applies the requested status. Validation of the status input remains correct. This is the first incomplete feature.",
+      "affectedTestIds": [
+        "A1-07"
+      ],
+      "verificationEvidence": "../verification/A1-D04.json"
+    },
+    {
+      "id": "A1-D05",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment01/service/TicketService.java",
+          "referenceSha256": "0d173bd6d46204624e8165bbd7045d4524eb9cd8ce3aa0f53d5a00951242037a",
+          "starterSha256": "969fbb98ed8225188c46b08356dfd374fbeb21007f53c3e27bda328b1d9f1311",
+          "combinedStarterSha256": "290e99a172bf56e2bd138fe04d8977ae5e15c145e082279a23d29e82927624b3"
+        }
+      ],
+      "patch": "mutations/A1-D05.patch",
+      "designatedDetectingIds": [
+        "A1-11",
+        "A1-13"
+      ],
+      "observedFailingIds": [
+        "A1-22",
+        "A1-24",
+        "A1-11",
+        "A1-13"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "List requests validate `status` but fail to apply the status filter.",
+      "affectedTestIds": [
+        "A1-11",
+        "A1-13",
+        "A1-22",
+        "A1-24"
+      ],
+      "verificationEvidence": "../verification/A1-D05.json"
+    },
+    {
+      "id": "A1-D06",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment01/service/TicketService.java",
+          "referenceSha256": "0d173bd6d46204624e8165bbd7045d4524eb9cd8ce3aa0f53d5a00951242037a",
+          "starterSha256": "9a5f5a051550ac78584e1fa60039436f0341b6a9b7a65ef7f2cffefb2bf5d3de",
+          "combinedStarterSha256": "290e99a172bf56e2bd138fe04d8977ae5e15c145e082279a23d29e82927624b3"
+        }
+      ],
+      "patch": "mutations/A1-D06.patch",
+      "designatedDetectingIds": [
+        "A1-12"
+      ],
+      "observedFailingIds": [
+        "A1-12",
+        "A1-13"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "`priorityDesc` is implemented with priority ascending; its ID tie-breaker is ascending. Default `idAsc` remains correct.",
+      "affectedTestIds": [
+        "A1-12",
+        "A1-13"
+      ],
+      "verificationEvidence": "../verification/A1-D06.json"
+    },
+    {
+      "id": "A1-D07",
+      "files": [
+        {
+          "path": "src/main/java/dev/practice/assessment01/service/TicketService.java",
+          "referenceSha256": "0d173bd6d46204624e8165bbd7045d4524eb9cd8ce3aa0f53d5a00951242037a",
+          "starterSha256": "57f3e890ddeddbe6a9a8b7279764ad6600e6c44ff56d5db44ebf9b0369adcb94",
+          "combinedStarterSha256": "290e99a172bf56e2bd138fe04d8977ae5e15c145e082279a23d29e82927624b3"
+        }
+      ],
+      "patch": "mutations/A1-D07.patch",
+      "designatedDetectingIds": [
+        "A1-10"
+      ],
+      "observedFailingIds": [
+        "A1-10"
+      ],
+      "smokePassed": 2,
+      "buildExitCode": 1,
+      "behavioralChange": "Deleting a nonexistent positive ID is treated as a successful no-op with 204. Existing deletion still works.",
+      "affectedTestIds": [
+        "A1-10"
+      ],
+      "verificationEvidence": "../verification/A1-D07.json"
+    }
+  ]
+}

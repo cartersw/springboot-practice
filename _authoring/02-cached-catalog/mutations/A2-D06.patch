@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment02/cache/SearchKeyFactory.java
++++ b/src/main/java/dev/practice/assessment02/cache/SearchKeyFactory.java
+@@ -6,7 +6,7 @@
+ @Component public class SearchKeyFactory {
+  private final ObjectMapper mapper;public SearchKeyFactory(ObjectMapper m){mapper=m;}
+  public String key(SearchCriteria c){try{
+-  var values=Arrays.asList(c.q(),c.category(),c.minPrice(),c.maxPrice(),c.inStock(),c.page(),c.size(),c.sort());
++  var values=Arrays.asList(c.category(),c.minPrice(),c.maxPrice());
+   return "products:search:v1:"+Base64.getUrlEncoder().withoutPadding().encodeToString(mapper.writeValueAsString(values).getBytes(StandardCharsets.UTF_8));
+  }catch(Exception e){throw new IllegalStateException("Cannot encode search",e);}}
+ }

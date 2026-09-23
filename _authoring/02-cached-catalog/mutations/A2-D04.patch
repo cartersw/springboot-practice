@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
++++ b/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
+@@ -18,7 +18,7 @@
+   if(c.maxPrice()!=null){filters.add("p.priceCents <= :max");params.put("max",c.maxPrice());}
+   if(c.inStock()!=null)filters.add(c.inStock()?"p.stock > 0":"p.stock = 0");
+   String where=filters.isEmpty()?"":" where "+String.join(" and ",filters);
+-  String order=switch(c.sort()){case priceAsc->"p.priceCents asc, p.id asc";case priceDesc->"p.priceCents desc, p.id asc";case nameAsc->"lower(p.name) asc, p.id asc";};
++  String order=switch(c.sort()){case priceAsc->"p.priceCents asc, p.id asc";case priceDesc->"p.priceCents desc, p.id desc";case nameAsc->"lower(p.name) asc, p.id asc";};
+   var query=em.createQuery("select p from Product p"+where+" order by "+order,Product.class);
+   var count=em.createQuery("select count(p) from Product p"+where,Long.class);
+   params.forEach((k,v)->{query.setParameter(k,v);count.setParameter(k,v);});

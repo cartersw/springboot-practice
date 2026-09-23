@@ -1,0 +1,23 @@
+@base = http://127.0.0.1:8082
+
+### Health
+GET {{base}}/health
+
+### Search
+GET {{base}}/api/products?category=electronics&size=2&page=0
+### Repeat search
+GET {{base}}/api/products?category=electronics&size=2&page=0
+### Update fixture row
+PUT {{base}}/api/products/103
+Content-Type: application/json
+
+{"name":"Wireless Mouse","category":"accessories","priceCents":3000,"stock":0}
+### Search after update
+GET {{base}}/api/products?category=electronics&size=2&page=0
+### Documented invalid input
+GET {{base}}/api/products?size=0
+### Missing row
+PUT {{base}}/api/products/9999
+Content-Type: application/json
+
+{"name":"Mouse","category":"electronics","priceCents":2500,"stock":2}

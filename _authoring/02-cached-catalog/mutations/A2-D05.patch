@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
++++ b/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
+@@ -24,7 +24,7 @@
+   params.forEach((k,v)->{query.setParameter(k,v);count.setParameter(k,v);});
+   int selectedPage=c.page();
+   var content=query.setFirstResult(selectedPage*c.size()).setMaxResults(c.size()).getResultList().stream().map(ProductResponse::from).toList();
+-  long total=count.getSingleResult();
++  long total=content.size();
+   int pages=(int)((total+c.size()-1)/c.size());
+   return new CatalogPageResponse(content,c.page(),c.size(),total,pages,c.page()==0,pages==0||c.page()>=pages-1);
+  }

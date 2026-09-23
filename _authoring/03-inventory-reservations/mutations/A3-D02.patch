@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment03/normalization/ReservationRequestNormalizer.java
++++ b/src/main/java/dev/practice/assessment03/normalization/ReservationRequestNormalizer.java
+@@ -14,7 +14,7 @@
+    String sku=required(item.sku(),32).toUpperCase(Locale.ROOT);
+    if(!sku.matches("[A-Z0-9-]+"))throw new InvalidRequestException("Invalid SKU");
+    if(item.quantity()==null||item.quantity()<1||item.quantity()>100)throw new InvalidRequestException("Invalid quantity");
+-   merged.merge(sku,item.quantity(),Integer::sum);
++   merged.put(sku,item.quantity());
+   }
+   var items=merged.entrySet().stream().map(e->new ReservationItemResponse(e.getKey(),e.getValue())).toList();
+   try{String canonical=mapper.writeValueAsString(List.of(customer,items.stream().map(i->List.of(i.sku(),i.quantity())).toList()));return new NormalizedReservationRequest(key,customer,items,canonical);}catch(Exception e){throw new IllegalStateException("Cannot encode request",e);}

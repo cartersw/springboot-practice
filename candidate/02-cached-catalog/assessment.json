@@ -1,0 +1,42 @@
+{
+  "id": "02",
+  "title": "Cached Parts Catalog",
+  "timeboxMinutes": 75,
+  "basePackage": "dev.practice.assessment02",
+  "port": 8082,
+  "javaVersion": 21,
+  "mavenVersion": "3.9.9",
+  "springBootVersion": "3.5.16",
+  "publicScoredTests": 15,
+  "fullScoredTests": 25,
+  "smokeTests": 2,
+  "maxPoints": 100,
+  "normalTestCommand": ".\\mvnw.cmd -B -ntp test",
+  "allowedEditPaths": [
+    "src/main/java/**"
+  ],
+  "protectedPaths": [
+    ".mvn/wrapper/maven-wrapper.properties",
+    "mvnw",
+    "mvnw.cmd",
+    "pom.xml",
+    "src/main/java/dev/practice/assessment02/CachedCatalogApplication.java",
+    "src/main/java/dev/practice/assessment02/cache/InMemoryKeyValueStore.java",
+    "src/main/java/dev/practice/assessment02/cache/KeyValueStore.java",
+    "src/main/java/dev/practice/assessment02/config/ClockConfig.java",
+    "src/main/java/dev/practice/assessment02/config/DemoDataInitializer.java",
+    "src/main/java/dev/practice/assessment02/health/HealthController.java",
+    "src/main/java/dev/practice/assessment02/observation/ProductQueryGateway.java",
+    "src/main/java/dev/practice/assessment02/observation/QueryProbe.java",
+    "src/main/resources/application.yml",
+    "src/test/java/dev/practice/assessment02/contract/CatalogPublicContractTest.java",
+    "src/test/java/dev/practice/assessment02/contract/SmokeTest.java",
+    "src/test/java/dev/practice/assessment02/support/ApiTestSupport.java",
+    "src/test/java/dev/practice/assessment02/support/ClockTestConfig.java",
+    "src/test/java/dev/practice/assessment02/support/Fixtures.java",
+    "src/test/java/dev/practice/assessment02/support/MutableClock.java",
+    "src/test/resources/application-test.yml",
+    "src/test/resources/junit-platform.properties"
+  ],
+  "starterNotice": "Starter intentionally has failing behavioral tests."
+}

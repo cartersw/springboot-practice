@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment03/service/ReservationService.java
++++ b/src/main/java/dev/practice/assessment03/service/ReservationService.java
+@@ -21,7 +21,7 @@
+  }
+  @Transactional(readOnly=true) public ReservationResponse get(long id){return response(find(id));}
+  @Transactional public ReservationResponse cancel(long id){
+-  var r=find(id);if(r.getStatus()==ReservationStatus.CANCELLED)return response(r);
++  var r=find(id);
+   for(var line:lines.findByReservationIdOrderByStockItemSkuAsc(r.getId())){var s=stock.findById(line.getStockItem().getSku()).orElseThrow(StockNotFoundException::new);s.setAvailableQuantity(s.getAvailableQuantity()+line.getQuantity());stock.saveAndFlush(s);}
+   r.setStatus(ReservationStatus.CANCELLED);r=reservations.saveAndFlush(r);audit.recordCancelled(r.getId());return response(r);
+  }

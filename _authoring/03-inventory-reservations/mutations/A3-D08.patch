@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment03/repository/InventorySummaryRepository.java
++++ b/src/main/java/dev/practice/assessment03/repository/InventorySummaryRepository.java
+@@ -3,7 +3,7 @@
+ @Repository public class InventorySummaryRepository {
+  private final JdbcTemplate jdbc;public InventorySummaryRepository(JdbcTemplate j){jdbc=j;}
+  public List<InventorySummaryResponse> summary(){
+-  String sql="select s.sku,s.available_quantity,coalesce(sum(case when r.status='ACTIVE' then l.quantity else 0 end),0) reserved_quantity,count(distinct case when r.status='ACTIVE' then r.id end) active_reservations from stock_items s left join reservation_lines l on l.sku=s.sku left join reservations r on r.id=l.reservation_id group by s.sku,s.available_quantity order by s.sku";
++  String sql="select s.sku,s.available_quantity,count(l.id) reserved_quantity,count(r.id) active_reservations from stock_items s join reservation_lines l on l.sku=s.sku join reservations r on r.id=l.reservation_id group by s.sku,s.available_quantity order by s.sku";
+   return jdbc.query(sql,(rs,i)->new InventorySummaryResponse(rs.getString("sku"),rs.getInt("available_quantity"),rs.getLong("reserved_quantity"),rs.getLong("active_reservations")));
+  }
+ }

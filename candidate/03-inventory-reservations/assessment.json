@@ -1,0 +1,39 @@
+{
+  "id": "03",
+  "title": "Inventory Reservations",
+  "timeboxMinutes": 90,
+  "basePackage": "dev.practice.assessment03",
+  "port": 8083,
+  "javaVersion": 21,
+  "mavenVersion": "3.9.9",
+  "springBootVersion": "3.5.16",
+  "publicScoredTests": 15,
+  "fullScoredTests": 25,
+  "smokeTests": 2,
+  "maxPoints": 100,
+  "normalTestCommand": ".\\mvnw.cmd -B -ntp test",
+  "allowedEditPaths": [
+    "src/main/java/**"
+  ],
+  "protectedPaths": [
+    ".mvn/wrapper/maven-wrapper.properties",
+    "mvnw",
+    "mvnw.cmd",
+    "pom.xml",
+    "src/main/java/dev/practice/assessment03/InventoryReservationsApplication.java",
+    "src/main/java/dev/practice/assessment03/audit/DatabaseReservationAudit.java",
+    "src/main/java/dev/practice/assessment03/audit/ReservationAudit.java",
+    "src/main/java/dev/practice/assessment03/config/DemoDataInitializer.java",
+    "src/main/java/dev/practice/assessment03/health/HealthController.java",
+    "src/main/resources/application.yml",
+    "src/test/java/dev/practice/assessment03/contract/ReservationPublicContractTest.java",
+    "src/test/java/dev/practice/assessment03/contract/SmokeTest.java",
+    "src/test/java/dev/practice/assessment03/support/ApiTestSupport.java",
+    "src/test/java/dev/practice/assessment03/support/AuditTestConfig.java",
+    "src/test/java/dev/practice/assessment03/support/ControllableReservationAudit.java",
+    "src/test/java/dev/practice/assessment03/support/Fixtures.java",
+    "src/test/resources/application-test.yml",
+    "src/test/resources/junit-platform.properties"
+  ],
+  "starterNotice": "Starter intentionally has failing behavioral tests."
+}

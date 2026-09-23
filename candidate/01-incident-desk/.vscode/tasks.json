@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Public tests",
+      "type": "shell",
+      "command": "./mvnw",
+      "windows": {
+        "command": ".\\mvnw.cmd"
+      },
+      "args": [
+        "-B",
+        "-ntp",
+        "test"
+      ],
+      "group": "test",
+      "problemMatcher": [
+        "$javac"
+      ]
+    },
+    {
+      "label": "Smoke checks",
+      "type": "shell",
+      "command": "./mvnw",
+      "windows": {
+        "command": ".\\mvnw.cmd"
+      },
+      "args": [
+        "-B",
+        "-ntp",
+        "-Dtest=SmokeTest",
+        "test"
+      ],
+      "problemMatcher": [
+        "$javac"
+      ]
+    }
+  ]
+}

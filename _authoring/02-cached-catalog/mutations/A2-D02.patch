@@ -1,0 +1,11 @@
+--- a/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
++++ b/src/main/java/dev/practice/assessment02/repository/ProductSearchRepository.java
+@@ -14,7 +14,7 @@
+   if(c.q()!=null&&c.category()!=null)filters.add("("+q+" and "+category+")");
+   else if(c.q()!=null)filters.add(q);else if(c.category()!=null)filters.add(category);
+   if(c.q()!=null)params.put("q",c.q());if(c.category()!=null)params.put("category",c.category());
+-  if(c.minPrice()!=null){filters.add("p.priceCents >= :min");params.put("min",c.minPrice());}
++  if(c.minPrice()!=null){filters.add("p.priceCents > :min");params.put("min",c.minPrice());}
+   if(c.maxPrice()!=null){filters.add("p.priceCents <= :max");params.put("max",c.maxPrice());}
+   if(c.inStock()!=null)filters.add(c.inStock()?"p.stock > 0":"p.stock = 0");
+   String where=filters.isEmpty()?"":" where "+String.join(" and ",filters);

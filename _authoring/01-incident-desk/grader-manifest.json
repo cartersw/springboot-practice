@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "assessmentId": "01",
+  "specificationVersion": "1.0",
+  "maxPoints": 100,
+  "expectedScoredTests": 25,
+  "expectedSmokeTests": 2,
+  "tests": [
+    {
+      "id": "A1-01",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_01",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-02",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_02",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-03",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_03",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-04",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_04",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-05",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_05",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-06",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_06",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-07",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_07",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-08",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_08",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-09",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_09",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-10",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_10",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-11",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_11",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-12",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_12",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-13",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_13",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-14",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_14",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-15",
+      "className": "dev.practice.assessment01.contract.TicketPublicContractTest",
+      "methodName": "a1_15",
+      "visibility": "public",
+      "points": 4
+    },
+    {
+      "id": "A1-16",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_16",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-17",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_17",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-18",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_18",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-19",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_19",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-20",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_20",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-21",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_21",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-22",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_22",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-23",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_23",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-24",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_24",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "A1-25",
+      "className": "dev.practice.assessment01.contract.TicketPrivateContractTest",
+      "methodName": "a1_25",
+      "visibility": "private",
+      "points": 4
+    },
+    {
+      "id": "SMOKE-CONTEXTSTARTS",
+      "className": "dev.practice.assessment01.contract.SmokeTest",
+      "methodName": "contextStarts",
+      "visibility": "public",
+      "points": 0
+    },
+    {
+      "id": "SMOKE-HEALTHRESPONDS",
+      "className": "dev.practice.assessment01.contract.SmokeTest",
+      "methodName": "healthResponds",
+      "visibility": "public",
+      "points": 0
+    }
+  ],
+  "protectedFiles": {
+    ".mvn/wrapper/maven-wrapper.properties": "b0e7995e6522a43fb50b482c0ae81bf639fe7b290d11015c9cb3367f99f1bbb8",
+    "mvnw": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+    "mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
+    "pom.xml": "bb98ad468ad3f4b4f0c55e9f449118195f292ff5acca0109bbfc1ae0fade32bb",
+    "src/main/java/dev/practice/assessment01/IncidentDeskApplication.java": "8c6cda9baa13b866302f677a5a7d728b1d4869f5d46921cd0db255b671f22e4e",
+    "src/main/java/dev/practice/assessment01/config/DemoDataInitializer.java": "a55ad397e4f51c7aa1d2983d3947f2d27452262d1a5d6dfc4d2e74f2b40e05be",
+    "src/main/java/dev/practice/assessment01/health/HealthController.java": "4937b2f25830d00d43589acda2d0cde7c840275c89667ceafb3161e9a621b2ac",
+    "src/main/resources/application.yml": "a93e841df3c735bc4a679f0c7d630350133c93b1eeb9867e30083fd880abe821",
+    "src/test/java/dev/practice/assessment01/contract/SmokeTest.java": "90a67184adda403b8dff6aebd57938583a4d1c252eb7294260d7e6e04c71e3f7",
+    "src/test/java/dev/practice/assessment01/contract/TicketPublicContractTest.java": "88ba7e5877c0234207628f59252e2eb9b2b32964928f598a254ebbe83da6c507",
+    "src/test/java/dev/practice/assessment01/support/ApiTestSupport.java": "fdf04c854b85a9ca140b1332a5a4f497dd06d85ed6d363e5b0a2edac686fcbf5",
+    "src/test/java/dev/practice/assessment01/support/Fixtures.java": "bee9fb0696dad291ba3cb7e32a86f773efdddbd6b4341292d43df4e978b42bcf",
+    "src/test/resources/application-test.yml": "aa25d7783f055f69cadfc19d77c0232b307220a6fc6d16264b90ac8b0db309ee",
+    "src/test/resources/junit-platform.properties": "38cd198fa1b94302fbd2f1c5a45242eee8c872e68e1c4eede55548ebade65579"
+  },
+  "trustedFiles": {
+    "trusted-tests/src/test/java/dev/practice/assessment01/contract/SmokeTest.java": "90a67184adda403b8dff6aebd57938583a4d1c252eb7294260d7e6e04c71e3f7",
+    "trusted-tests/src/test/java/dev/practice/assessment01/contract/TicketPrivateContractTest.java": "95d292e03fab2c65d461cca0f4df0f5560aa73aa2849c386e34694fb9761445a",
+    "trusted-tests/src/test/java/dev/practice/assessment01/contract/TicketPublicContractTest.java": "88ba7e5877c0234207628f59252e2eb9b2b32964928f598a254ebbe83da6c507",
+    "trusted-tests/src/test/java/dev/practice/assessment01/support/ApiTestSupport.java": "fdf04c854b85a9ca140b1332a5a4f497dd06d85ed6d363e5b0a2edac686fcbf5",
+    "trusted-tests/src/test/java/dev/practice/assessment01/support/Fixtures.java": "bee9fb0696dad291ba3cb7e32a86f773efdddbd6b4341292d43df4e978b42bcf",
+    "trusted-tests/src/test/resources/application-test.yml": "aa25d7783f055f69cadfc19d77c0232b307220a6fc6d16264b90ac8b0db309ee",
+    "trusted-tests/src/test/resources/junit-platform.properties": "38cd198fa1b94302fbd2f1c5a45242eee8c872e68e1c4eede55548ebade65579",
+    "trusted-build/mvnw": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+    "trusted-build/mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
+    "trusted-build/pom.xml": "bb98ad468ad3f4b4f0c55e9f449118195f292ff5acca0109bbfc1ae0fade32bb",
+    "trusted-build/.mvn/wrapper/maven-wrapper.properties": "b0e7995e6522a43fb50b482c0ae81bf639fe7b290d11015c9cb3367f99f1bbb8",
+    "trusted-build/src/main/resources/application.yml": "a93e841df3c735bc4a679f0c7d630350133c93b1eeb9867e30083fd880abe821"
+  },
+  "protectedTrees": [
+    ".mvn",
+    "src/main/resources",
+    "src/test"
+  ]
+}

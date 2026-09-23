@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Test set: dev.practice.assessment02.contract.CatalogPrivateContractTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.435 s <<< FAILURE! -- in dev.practice.assessment02.contract.CatalogPrivateContractTest
+dev.practice.assessment02.contract.CatalogPrivateContractTest.a2_25 -- Time elapsed: 0.021 s <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: 
+StatementCallback; SQL [insert into products values (113,'accessories','100%_ Cover',800,'CV-01',1)]; Data conversion error converting "'accessories' (PRODUCTS: ""STOCK"" INTEGER NOT NULL)"; SQL statement:
+insert into products values (113,'accessories','100%_ Cover',800,'CV-01',1) [22018-232]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:100)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:567)
+	at dev.practice.assessment02.contract.CatalogPrivateContractTest.a2_25(CatalogPrivateContractTest.java:13)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'accessories' (PRODUCTS: ""STOCK"" INTEGER NOT NULL)"; SQL statement:
+insert into products values (113,'accessories','100%_ Cover',800,'CV-01',1) [22018-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.table.Column.getDataConversionError(Column.java:450)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:409)
+	at org.h2.table.Table.convertInsertRow(Table.java:963)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:196)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at com.zaxxer.hikari.pool.ProxyStatement.executeUpdate(ProxyStatement.java:120)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeUpdate(HikariProxyStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1UpdateStatementCallback.doInStatement(JdbcTemplate.java:555)
+	at org.springframework.jdbc.core.JdbcTemplate$1UpdateStatementCallback.doInStatement(JdbcTemplate.java:552)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:393)
+	... 5 more
+Caused by: org.h2.message.DbException: Data conversion error converting "accessories" [22018-232]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:133)
+	at org.h2.value.Value.convertToInt(Value.java:1601)
+	at org.h2.value.Value.convertTo(Value.java:1161)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1118)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:406)
+	... 19 more
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "accessories" [22018-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 25 more
+Caused by: java.lang.NumberFormatException: For input string: "accessories"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at org.h2.value.ValueStringBase.getInt(ValueStringBase.java:131)
+	... 23 more
+

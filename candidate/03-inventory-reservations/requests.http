@@ -1,0 +1,26 @@
+@base = http://127.0.0.1:8083
+
+### Health
+GET {{base}}/health
+
+### Initial summary
+GET {{base}}/api/inventory/summary
+### Create
+# @name createReservation
+POST {{base}}/api/reservations
+Content-Type: application/json
+
+{"requestKey":"manual-001","customerRef":"team-a","items":[{"sku":"BOLT-M8","quantity":3},{"sku":"NUT-M8","quantity":2}]}
+### Replay same request
+POST {{base}}/api/reservations
+Content-Type: application/json
+
+{"requestKey":"manual-001","customerRef":"team-a","items":[{"sku":"BOLT-M8","quantity":3},{"sku":"NUT-M8","quantity":2}]}
+### Read returned ID
+GET {{base}}/api/reservations/{{createReservation.response.body.$.id}}
+### Cancel
+POST {{base}}/api/reservations/{{createReservation.response.body.$.id}}/cancel
+### Summary
+GET {{base}}/api/inventory/summary
+### Missing row
+GET {{base}}/api/reservations/9999

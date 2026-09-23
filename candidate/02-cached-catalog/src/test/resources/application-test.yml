@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:cached_catalog_test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+logging:
+  level:
+    root: WARN
+    dev.practice: WARN

@@ -1,0 +1,9 @@
+--- a/src/main/java/dev/practice/assessment03/normalization/ReservationRequestNormalizer.java
++++ b/src/main/java/dev/practice/assessment03/normalization/ReservationRequestNormalizer.java
+@@ -19,5 +19,5 @@
+   var items=merged.entrySet().stream().map(e->new ReservationItemResponse(e.getKey(),e.getValue())).toList();
+   try{String canonical=mapper.writeValueAsString(List.of(customer,items.stream().map(i->List.of(i.sku(),i.quantity())).toList()));return new NormalizedReservationRequest(key,customer,items,canonical);}catch(Exception e){throw new IllegalStateException("Cannot encode request",e);}
+  }
+- public boolean samePayload(String saved,String incoming){return saved.equals(incoming);}
++ public boolean samePayload(String saved,String incoming){try{return mapper.readTree(saved).get(1).equals(mapper.readTree(incoming).get(1));}catch(Exception e){throw new IllegalStateException(e);}}
+ }
