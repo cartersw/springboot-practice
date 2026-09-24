@@ -33,7 +33,7 @@
   "starterArchives": {
     "01": {
       "path": "starter-archives/01-incident-desk.zip",
-      "sha256": "5a597f272c1457a1e9e8491d3ebd4328d3c4a1caf0ba148f64f6d87a65eb089e",
+      "sha256": "b35f09d4bbd6b328d46bd06929bd0aca5961e268237c483a007ee8d013b0c252",
       "sourceHashes": {
         ".gitattributes": "7eb61a0e100e9f02e4a830af7efc63a500f48437be5cfa5bae43b1d9fa0910c0",
         ".gitignore": "fae69f90cfe199ebb6e6189fce0259c5fb5dc31c400b84e8a3ca6614aed8ba61",
@@ -48,8 +48,8 @@
         "mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
         "pom.xml": "bb98ad468ad3f4b4f0c55e9f449118195f292ff5acca0109bbfc1ae0fade32bb",
         "public-tests.json": "10a0763626b3b8dfc4583250d9d65d461009bc9a93148db44ff93fcfad88c38f",
-        "QUICK_REFERENCE.md": "b250ae50f966732c603ae8c1d5cef8b62a1608e9a7834e3b62249356cc12787f",
-        "README.md": "465687ade14389e1d76f1fbc8712eeea0896ffa7c9afaf7e0ff5de4375099ae4",
+        "QUICK_REFERENCE.md": "390c5be4241b9cf224a5653cbc8224e858b4bf635e5d2d6e3165b7afd67c60eb",
+        "README.md": "526a32b167a61f4d6e01c97bc739cb810f180910a128ca4658362e289f5bc7a1",
         "requests.http": "1002d9f92729cbb82993d5316e8aec7fd2616c7bc5bedb75c0c62d2ac304e0ff",
         "src/main/java/dev/practice/assessment01/config/DemoDataInitializer.java": "a55ad397e4f51c7aa1d2983d3947f2d27452262d1a5d6dfc4d2e74f2b40e05be",
         "src/main/java/dev/practice/assessment01/controller/TicketController.java": "2456b01e6cf28c4a2ddc6fb9ad7273d08e1d70d6e5ed86731029c14117cb06cd",
@@ -82,7 +82,7 @@
     },
     "02": {
       "path": "starter-archives/02-cached-catalog.zip",
-      "sha256": "735a964686abda9283392b43ce4848201ddf95ac7708343dd25127502ed0c962",
+      "sha256": "be3c806f7336fd752f3311a09c3809971cdc308df0bb739a10b5cd714bdc41ae",
       "sourceHashes": {
         ".gitattributes": "7eb61a0e100e9f02e4a830af7efc63a500f48437be5cfa5bae43b1d9fa0910c0",
         ".gitignore": "fae69f90cfe199ebb6e6189fce0259c5fb5dc31c400b84e8a3ca6614aed8ba61",
@@ -97,8 +97,8 @@
         "mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
         "pom.xml": "8d9cc365bcae02c155548c52b88fea625a67a77c4a74fcd4c16820d181f140ab",
         "public-tests.json": "f7fafa7641a52f796c4ed1888b777b3744da3404756a9d53ef8a59b8a5f5e730",
-        "QUICK_REFERENCE.md": "b250ae50f966732c603ae8c1d5cef8b62a1608e9a7834e3b62249356cc12787f",
-        "README.md": "c0656346e7956bed1748b523036aa72b39388d2d9247a51fdcb1b78a0f0a787b",
+        "QUICK_REFERENCE.md": "390c5be4241b9cf224a5653cbc8224e858b4bf635e5d2d6e3165b7afd67c60eb",
+        "README.md": "7d5770b523d201958c1f4eb2f5da591d9f240acacf1f79e65f453e91405c6a27",
         "requests.http": "af9dc1e23b1d42d4cfb1559d1cd89c5b18d0461b11de7725f7f04a189dc1bca6",
         "src/main/java/dev/practice/assessment02/cache/InMemoryKeyValueStore.java": "f746ddd641d3bbfe0d1a471a76e40847f06d6ada5d415a757df643030d604c72",
         "src/main/java/dev/practice/assessment02/cache/KeyValueStore.java": "786a15c2357c8131e1e33ae8f190867ea7375def768c29e258ff78a9ee152406",
@@ -141,7 +141,7 @@
     },
     "03": {
       "path": "starter-archives/03-inventory-reservations.zip",
-      "sha256": "bc31f854ea1fc6f7dd6a257939a7bedbbc1a647b7a131d719ef855910756ea4d",
+      "sha256": "c14910583cc08e6209569b6043bf50ea8af289b57cd79198d63d9763aa14266e",
       "sourceHashes": {
         ".gitattributes": "7eb61a0e100e9f02e4a830af7efc63a500f48437be5cfa5bae43b1d9fa0910c0",
         ".gitignore": "fae69f90cfe199ebb6e6189fce0259c5fb5dc31c400b84e8a3ca6614aed8ba61",
@@ -156,8 +156,8 @@
         "mvnw.cmd": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c",
         "pom.xml": "dbff506e774794fe761a70882d2c4e6edd2326132ec840c1ea62a2811ede6ec0",
         "public-tests.json": "a41d4488812cf969f06e63fb50e5d40daa484dc2c04fe0d8a4b283c1e66e0651",
-        "QUICK_REFERENCE.md": "b250ae50f966732c603ae8c1d5cef8b62a1608e9a7834e3b62249356cc12787f",
-        "README.md": "020c206c3b7ec4792b7dcddc0b06171c06366080c1a2d5f98e62591cefa74fb2",
+        "QUICK_REFERENCE.md": "390c5be4241b9cf224a5653cbc8224e858b4bf635e5d2d6e3165b7afd67c60eb",
+        "README.md": "178ce35a1a69131495653cefc26dcace484630761147ff10c71066a8d0841231",
         "requests.http": "1f238cadc1c78bc8f5f72a5f0664d896756fedd9512bab17ec66a52a795a65f3",
         "src/main/java/dev/practice/assessment03/audit/DatabaseReservationAudit.java": "ecf49a49f9b5282b3035cc3c47c1f5d387340356892d1f1e8772b273315838c8",
         "src/main/java/dev/practice/assessment03/audit/ReservationAudit.java": "d21c5c925144a7fd8c687526bb85c782835600daa7085cf697196468bf07a339",

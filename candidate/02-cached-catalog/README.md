@@ -1,80 +1,99 @@
 # Cached Parts Catalog
 
-This is an unsolved repair assessment. Read ASSESSMENT.md, then use ARCHITECTURE.md
-and QUICK_REFERENCE.md as navigation aids. Suggested time: 75 minutes after setup.
-Verified starter baseline: **7/15 public scored tests pass;
-8/15 fail; 2/2 smoke checks pass**. Normal Maven test execution
-discovers 17 methods and exits nonzero because behavior failures are deliberate.
-Compilation and startup failures are not intended. Full grading adds 10 private
-input variants of published rules, for 25 scored tests × 4 points = 100.
+Fix the app using the rules in [ASSESSMENT.md](ASSESSMENT.md).
+Suggested practice time: **75 minutes**, starting after setup.
 
-## Windows PowerShell (tested on this machine)
+## Set up and practice - Windows PowerShell
 
-From the pack root, follow START_HERE.md to select JDK 21 and Python 3.11+.
-Then open this candidate or fresh-attempt folder in the same PowerShell window:
+1. **Prepare your terminal - main folder.**
+   Follow `START_HERE.md` in the folder containing `candidate` and `tools`.
+
+2. **Open this project - same terminal.**
+   Enter this folder, or the folder printed when you created a fresh attempt.
+
+   ```powershell
+   cd candidate/02-cached-catalog
+   ```
+
+3. **Read the task - your editor.**
+   Read [ASSESSMENT.md](ASSESSMENT.md) for the requirements and allowed changes; [ARCHITECTURE.md](ARCHITECTURE.md) and [QUICK_REFERENCE.md](QUICK_REFERENCE.md) help you find things.
+
+4. **Check your tools - project folder.**
+   These commands show the Java and build-tool versions; both Java commands should report version 21.
+
+   ```powershell
+   java -version
+   javac -version
+   .\mvnw.cmd -v
+   ```
+
+5. **Build the app - project folder.**
+   This checks that the code builds successfully without running the tests.
+
+   ```powershell
+   .\mvnw.cmd -B -ntp '-DskipTests' package
+   ```
+
+6. **Check that the app starts - project folder.**
+   This runs two basic checks that the app starts and responds; both must pass.
+
+   ```powershell
+   .\mvnw.cmd -B -ntp '-Dtest=SmokeTest' test
+   ```
+
+7. **Work on the task and check progress - project folder.**
+   Edit the allowed files in `src/main/java` and repeat this command to see which tests now pass.
+
+   ```powershell
+   .\mvnw.cmd -B -ntp test
+   ```
+
+   Before you make changes, expect **7 passing and 8 failing task tests**, plus **2 passing startup checks**.
+
+## Get a score or start again - main folder
+
+Return to the folder containing `START_HERE.md` before running these commands.
+
+**Get your score:** runs the task tests plus additional checks of the same requirements and gives a score out of 100.
 
 ```powershell
-java -version
-javac -version
-.\mvnw.cmd -v
-.\mvnw.cmd -B -ntp '-DskipTests' package
-.\mvnw.cmd -B -ntp '-Dtest=SmokeTest' test
-.\mvnw.cmd -B -ntp test
-.\mvnw.cmd '-Dtest=CatalogPublicContractTest#a2_05' test
-.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=demo'
-```
-
-`-DskipTests package` is setup/compilation only, not test verification.
-The demo listens on http://127.0.0.1:8082. Stop with Ctrl+C. Tests use MockMvc
-and do not need that port. In-memory data resets at application restart. Tests
-seed their own fixtures independently of demo data. Use response IDs in requests.http.
-
-## macOS/Linux (instructions supplied; not executed here)
-
-Install JDK 21 and Python 3.11+ using official distributions, then:
-
-```sh
-java -version
-javac -version
-./mvnw -v
-./mvnw -B -ntp -DskipTests package
-./mvnw -B -ntp -Dtest=SmokeTest test
-./mvnw -B -ntp test
-./mvnw '-Dtest=CatalogPublicContractTest#a2_05' test
-./mvnw spring-boot:run -Dspring-boot.run.profiles=demo
-```
-
-If archive extraction loses executable permissions, run `chmod +x mvnw` or
-use `sh ./mvnw test`. Use `python3` instead of `python` where appropriate.
-
-## Grading and fresh attempts
-
-From the pack root (the folder containing START_HERE.md; fresh attempts may be deeper):
-
-```powershell
-python tools/practice.py doctor
-python tools/practice.py test 02
 python tools/practice.py grade 02
+```
+
+**Start again:** creates a fresh copy and keeps your existing work.
+
+```powershell
 python tools/practice.py new-attempt 02 --name second-try
 ```
 
-The fresh-attempt command prints its new path and exact `--attempt` commands.
-It preserves existing work. Default grading reports counts and failed IDs;
-`--details` opts into private failure details and may spoil practice.
-Private files remain locally accessible to the owner; this is not a secure exam.
+Open the printed folder and use its printed test and grade commands, including `--attempt`, to check that copy.
 
-## Setup recovery
+## Other useful commands - project folder
 
-- `JAVA_HOME` must point to the JDK 21 directory, not `bin`; check both `javac -version`
-  and the Java version printed by the wrapper. Changes to these environment variables affect this shell only.
-- First builds normally require network downloads. Retry a failed download after restoring
-  network/proxy access. An offline run after warm-up is `.\mvnw.cmd -o -B -ntp test`
-  (Unix: `./mvnw -o -B -ntp test`); expected assertions still fail.
-- If a port is occupied, stop the previous demo process or select a different local port
-  for manual exploration. Do not change the test resources.
-- In a synced OneDrive directory, read-only/locked generated `target` folders may prevent
-  `clean`. Close processes holding them or use a fresh attempt; the grader uses new snapshots.
-- Public assertion failures at the documented baseline mean the starter is running.
-  Do not edit the POM or tests to hide failures.
+```powershell
+# Run just one test while working on a specific problem.
+.\mvnw.cmd '-Dtest=CatalogPublicContractTest#a2_05' test
 
-Optional JDK vendor downloads: https://adoptium.net/temurin/releases/?version=21
+# Run the tests without downloading anything; requires a previous successful download.
+.\mvnw.cmd -o -B -ntp test
+
+# Start the app with sample data so you can try requests yourself.
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=demo'
+```
+
+Open http://127.0.0.1:8082/health and try the examples in `requests.http`.
+Stop the app with **Ctrl+C**; restarting clears its data.
+The tests do not need this demo running.
+
+## macOS/Linux
+
+Follow `START_HERE_MAC_LINUX.md` in the main folder, then use `./mvnw` instead of `.\mvnw.cmd` and `python3` instead of `python`.
+If you get `Permission denied`, run `chmod +x mvnw` in the project folder.
+
+## If a command fails
+
+- **Wrong Java version:** set `JAVA_HOME` to your JDK 21 folder and repeat Step 3 of `START_HERE.md`.
+- **Download failed:** check your internet connection and rerun the command.
+- **Address already in use:** stop the previous demo with Ctrl+C.
+- **Files locked or access denied:** close the running app and retry, or create a fresh attempt.
+- **Task tests fail:** use the failures to guide your fixes; leave the tests and build settings unchanged.
