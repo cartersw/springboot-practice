@@ -1,99 +1,65 @@
 # Inventory Reservations
 
-Fix the app using the rules in [ASSESSMENT.md](ASSESSMENT.md).
-Suggested practice time: **90 minutes**, starting after setup.
+[Problem statement](ASSESSMENT.md) | [API requirements](API_REFERENCE.md) | [Code map](ARCHITECTURE.md) | [Java/Spring reference](QUICK_REFERENCE.md)
 
-## Set up and practice - Windows PowerShell
+**Time:** 90 minutes after setup. **Score:** 100 points.
 
-1. **Prepare your terminal - main folder.**
-   Follow `START_HERE.md` in the folder containing `candidate` and `tools`.
+## Software requirements
 
-2. **Open this project - same terminal.**
-   Enter this folder, or the folder printed when you created a fresh attempt.
+- **JDK 21** to build, run, and test. [Set up Java once](../../SETUP.md) if needed.
+- **Maven 3.9.9** is downloaded by the included wrapper. The H2 database is included too.
+- **Python 3.11+** is needed only for the optional scoring and fresh-attempt tools.
 
-   ```powershell
-   cd candidate/03-inventory-reservations
-   ```
+## Project commands
 
-3. **Read the task - your editor.**
-   Read [ASSESSMENT.md](ASSESSMENT.md) for the requirements and allowed changes; [ARCHITECTURE.md](ARCHITECTURE.md) and [QUICK_REFERENCE.md](QUICK_REFERENCE.md) help you find things.
+Open a terminal in **this folder**, beside `pom.xml` and `mvnw.cmd`. Run **Install** first and wait for `BUILD SUCCESS`. Then use **Run** to explore the API or **Test** to check your work.
 
-4. **Check your tools - project folder.**
-   These commands show the Java and build-tool versions; both Java commands should report version 21.
+| Action | Windows PowerShell | macOS / Linux |
+|---|---|---|
+| **Install** - download dependencies and build | `.\mvnw.cmd '-DskipTests' package` | `./mvnw -DskipTests package` |
+| **Run** - start with sample data | `.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=demo'` | `./mvnw spring-boot:run -Dspring-boot.run.profiles=demo` |
+| **Test** - run the public tests | `.\mvnw.cmd test` | `./mvnw test` |
 
-   ```powershell
-   java -version
-   javac -version
-   .\mvnw.cmd -v
-   ```
+Install skips tests. Before starting the timer, check startup with `.\mvnw.cmd '-Dtest=SmokeTest' test` (`./mvnw -Dtest=SmokeTest test` on macOS/Linux). Expect **2 passing tests**.
 
-5. **Build the app - project folder.**
-   This checks that the code builds successfully without running the tests.
+## Preview the API
 
-   ```powershell
-   .\mvnw.cmd -B -ntp '-DskipTests' package
-   ```
+After **Run** finishes starting the server, open:
 
-6. **Check that the app starts - project folder.**
-   This runs two basic checks that the app starts and responds; both must pass.
+- [Health check](http://localhost:8083/health)
+- [Example GET request](http://localhost:8083/api/inventory/summary)
 
-   ```powershell
-   .\mvnw.cmd -B -ntp '-Dtest=SmokeTest' test
-   ```
+Use `requests.http` with your editor's HTTP client, or Postman, for requests with a body. Use IDs returned by the app.
 
-7. **Work on the task and check progress - project folder.**
-   Edit the allowed files in `src/main/java` and repeat this command to see which tests now pass.
+**Stop:** Ctrl+C in the running terminal. **Reload code changes:** stop and run again. Restarting resets the sample data. To run tests while the app is running, open a second terminal in this folder; tests do not need the server.
 
-   ```powershell
-   .\mvnw.cmd -B -ntp test
-   ```
+## Test results
 
-   Before you make changes, expect **7 passing and 8 failing task tests**, plus **2 passing startup checks**.
+Before you change any code, **Test** should report:
 
-## Get a score or start again - main folder
+```text
+Tests run: 17, Failures: 8, Errors: 0, Skipped: 0
+BUILD FAILURE
+```
 
-Return to the folder containing `START_HERE.md` before running these commands.
+This is the expected starting point: 2 startup checks and 7 scored tests pass; 8 scored tests fail. Your goal is **17 passing tests**.
 
-**Get your score:** runs the task tests plus additional checks of the same requirements and gives a score out of 100.
+To run one test in PowerShell:
+
+```powershell
+.\mvnw.cmd '-Dtest=ReservationPublicContractTest#a3_05' test
+```
+
+Use `./mvnw` on macOS/Linux. Choose other test names from `public-tests.json`. Failure details are in `target/surefire-reports`.
+
+## Full score
+
+From the **pack root** (the folder containing `START_HERE.md`), run:
 
 ```powershell
 python tools/practice.py grade 03
 ```
 
-**Start again:** creates a fresh copy and keeps your existing work.
+This checks 25 scored cases worth 4 points each: 15 public cases and 10 private variants. Startup checks are not scored. For a fresh attempt, use its printed `--attempt` command.
 
-```powershell
-python tools/practice.py new-attempt 03 --name second-try
-```
-
-Open the printed folder and use its printed test and grade commands, including `--attempt`, to check that copy.
-
-## Other useful commands - project folder
-
-```powershell
-# Run just one test while working on a specific problem.
-.\mvnw.cmd '-Dtest=ReservationPublicContractTest#a3_05' test
-
-# Run the tests without downloading anything; requires a previous successful download.
-.\mvnw.cmd -o -B -ntp test
-
-# Start the app with sample data so you can try requests yourself.
-.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=demo'
-```
-
-Open http://127.0.0.1:8083/health and try the examples in `requests.http`.
-Stop the app with **Ctrl+C**; restarting clears its data.
-The tests do not need this demo running.
-
-## macOS/Linux
-
-Follow `START_HERE_MAC_LINUX.md` in the main folder, then use `./mvnw` instead of `.\mvnw.cmd` and `python3` instead of `python`.
-If you get `Permission denied`, run `chmod +x mvnw` in the project folder.
-
-## If a command fails
-
-- **Wrong Java version:** set `JAVA_HOME` to your JDK 21 folder and repeat Step 3 of `START_HERE.md`.
-- **Download failed:** check your internet connection and rerun the command.
-- **Address already in use:** stop the previous demo with Ctrl+C.
-- **Files locked or access denied:** close the running app and retry, or create a fresh attempt.
-- **Task tests fail:** use the failures to guide your fixes; leave the tests and build settings unchanged.
+[Fresh attempts and grading](../../START_HERE.md#score-or-start-another-attempt) | [Setup and troubleshooting](../../SETUP.md#troubleshooting) | [macOS/Linux setup](../../START_HERE_MAC_LINUX.md)

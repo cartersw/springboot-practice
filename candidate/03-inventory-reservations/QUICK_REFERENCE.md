@@ -28,7 +28,7 @@ problem. A JUnit assertion shows expected versus actual application behavior.
 Read its first relevant public test stack frame and its surrounding assertions.
 `Tests run`, `Failures`, `Errors`, and `Skipped` describe execution, not the full
 practice score. Full grading always uses 25 scored tests worth four points each.
-`-DskipTests package` builds the app without running tests.
+`-DskipTests package` only checks setup and compilation; it is not test verification.
 
 Fixtures reset independently before each test, so requests in different tests do
 not share a scenario. Debug one test with its own fixtures. Use returned IDs in
